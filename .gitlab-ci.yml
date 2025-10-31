@@ -75,7 +75,11 @@ trivy_image:
 
 sbom:
   stage: report
-  image: "aquasecurity/trivy:latest"
+  image: "python:3.11"  # или нужная версия
+  before_script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    - pip install trivy  # или скачай бинарь через curl
   script:
     - trivy fs --format cyclonedx --scanners vuln --output sbom.cdx.json .
   artifacts:
