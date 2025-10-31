@@ -77,8 +77,9 @@ sbom:
   stage: report
   image: "aquasecurity/trivy:latest"
   script:
-    - trivy sbom --format cyclonedx --output sbom.cdx.json .
+    - trivy fs --format cyclonedx --scanners vuln --output sbom.cdx.json .
   artifacts:
     when: always
-    paths: [sbom.cdx.json]
+    paths:
+      - sbom.cdx.json
     expire_in: 1 week
