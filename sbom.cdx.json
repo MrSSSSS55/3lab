@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:d155b07b-9e5f-43b8-b39c-79e84d4fe607",
+  "serialNumber": "urn:uuid:82f36505-da31-4e7e-9bcc-1bb2bfeb01fc",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-10-31T11:52:51+00:00",
+    "timestamp": "2025-10-31T12:10:58+00:00",
     "tools": {
       "components": [
         {
@@ -20,7 +20,7 @@
       ]
     },
     "component": {
-      "bom-ref": "bca4706e-5a63-4a27-b6e2-7b1cf382f596",
+      "bom-ref": "62c26abb-55da-4939-a9b2-18027fa4354c",
       "type": "application",
       "name": ".",
       "properties": [
@@ -33,7 +33,7 @@
   },
   "components": [
     {
-      "bom-ref": "8cadc5ea-476f-4564-9678-c6d92a53491d",
+      "bom-ref": "4c490952-3817-403a-a44a-6f9730e615af",
       "type": "application",
       "name": "requirements.txt",
       "properties": [
@@ -70,15 +70,15 @@
   ],
   "dependencies": [
     {
-      "ref": "8cadc5ea-476f-4564-9678-c6d92a53491d",
+      "ref": "4c490952-3817-403a-a44a-6f9730e615af",
       "dependsOn": [
         "pkg:pypi/pytest@8.2.1"
       ]
     },
     {
-      "ref": "bca4706e-5a63-4a27-b6e2-7b1cf382f596",
+      "ref": "62c26abb-55da-4939-a9b2-18027fa4354c",
       "dependsOn": [
-        "8cadc5ea-476f-4564-9678-c6d92a53491d"
+        "4c490952-3817-403a-a44a-6f9730e615af"
       ]
     },
     {
