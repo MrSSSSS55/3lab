@@ -1,0 +1,90 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:d155b07b-9e5f-43b8-b39c-79e84d4fe607",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-10-31T11:52:51+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.67.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "bca4706e-5a63-4a27-b6e2-7b1cf382f596",
+      "type": "application",
+      "name": ".",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "8cadc5ea-476f-4564-9678-c6d92a53491d",
+      "type": "application",
+      "name": "requirements.txt",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:Class",
+          "value": "lang-pkgs"
+        },
+        {
+          "name": "aquasecurity:trivy:Type",
+          "value": "pip"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:pypi/pytest@8.2.1",
+      "type": "library",
+      "name": "pytest",
+      "version": "8.2.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:pypi/pytest@8.2.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "pip"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "8cadc5ea-476f-4564-9678-c6d92a53491d",
+      "dependsOn": [
+        "pkg:pypi/pytest@8.2.1"
+      ]
+    },
+    {
+      "ref": "bca4706e-5a63-4a27-b6e2-7b1cf382f596",
+      "dependsOn": [
+        "8cadc5ea-476f-4564-9678-c6d92a53491d"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pytest@8.2.1",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}
