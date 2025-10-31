@@ -77,9 +77,13 @@ sbom:
   stage: report
   image: "aquasecurity/trivy:latest"
   script:
-    - trivy fs --format cyclonedx --scanners vuln --output sbom.cdx.json .
+    # 1. Генерация SBOM из requirements.txt
+    - trivy python --requirements requirements.txt --format cyclonedx --output sbom.cdx.json
+    # 2. Сканирование SBOM на уязвимости
+    - trivy sbom --format sarif --output sbom.sarif --scanners vuln sbom.cdx.json
   artifacts:
     when: always
     paths:
       - sbom.cdx.json
+      - sbom.sarif
     expire_in: 1 week
